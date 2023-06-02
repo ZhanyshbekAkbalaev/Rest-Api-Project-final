@@ -1,9 +1,7 @@
 package peaksoft.entity;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDate;
 
@@ -14,6 +12,8 @@ import static jakarta.persistence.CascadeType.*;
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Task {
     @Id
     @GeneratedValue(generator = "task_gen",strategy = GenerationType.SEQUENCE)

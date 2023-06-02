@@ -12,7 +12,6 @@ import java.util.List;
 public interface CourseRepository extends JpaRepository<Course, Long> {
     @Query("select new peaksoft.dto.response.CourseResponse(c.id, c.courseName, c.dateOfStart, c.description ) from Course c where c.company.id =?1")
     List<CourseResponse> findAllByCompanyId(Long companyId);
-
     @Query("select new peaksoft.dto.response.CourseResponse(c.id,c.courseName,c.dateOfStart,c.description)from Course c where c.id = ?1")
     CourseResponse getCourseById(Long courseId);
 }

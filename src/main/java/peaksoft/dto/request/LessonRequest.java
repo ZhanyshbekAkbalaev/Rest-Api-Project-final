@@ -8,5 +8,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 public class LessonRequest {
+
+    private Long id;
     private String lessonName;
 }

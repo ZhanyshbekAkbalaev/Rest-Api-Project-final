@@ -19,16 +19,13 @@ public class Company {
     @GeneratedValue(generator = "company_gen",strategy = GenerationType.SEQUENCE)
     @SequenceGenerator(name = "company_gen",sequenceName = "company_seq",allocationSize = 1)
     private Long id;
+    @Column(unique = true)
     private String name;
     private String country;
     private String address;
     private String phoneNumber;
 
     @ManyToMany(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
-    @JoinTable(
-            name = "instructors_companies",
-            joinColumns = @JoinColumn(name = "instructor_id"),
-            inverseJoinColumns = @JoinColumn(name = "company_id"))
     private List<Instructor> instructors;
 
     @OneToMany(cascade = ALL,mappedBy = "company")

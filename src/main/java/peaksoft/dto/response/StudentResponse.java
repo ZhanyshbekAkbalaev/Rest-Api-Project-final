@@ -3,6 +3,7 @@ package peaksoft.dto.response;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+import peaksoft.enums.StudyFormat;
 
 @Getter
 @Setter
@@ -13,5 +14,6 @@ public class StudentResponse {
     private String lastName;
     private String phoneNumber;
     private String email;
-    private String studyFormat;
+    private StudyFormat studyFormat;
+    private Boolean unblock;
 }

@@ -36,4 +36,8 @@ public class Group {
     public void addCourse(Course course) {
         courses.add(course);
     }
+
+    public void addStudent(Student student) {
+        students.add(student);
+    }
 }

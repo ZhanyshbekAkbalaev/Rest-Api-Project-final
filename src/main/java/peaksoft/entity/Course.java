@@ -42,4 +42,8 @@ public class Course {
     public void addGroup(Group group) {
         groups.add(group);
     }
+
+    public void addLesson(Lesson lesson) {
+        lessons.add(lesson);
+    }
 }

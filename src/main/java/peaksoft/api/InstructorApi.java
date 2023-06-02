@@ -44,12 +44,10 @@ public class InstructorApi {
         return instructorService.deleteInstructor(instructorId);
     }
 
-    @PostMapping("/assignCompany/{instructorId}/{companyId}")
-    public SimpleResponse assignInstructorToCompany(@PathVariable Long instructorId, @PathVariable Long companyId) {
+    @PostMapping("/assignCompany/{instructorId}")
+    public SimpleResponse assignInstructorToCompany(@PathVariable Long instructorId, @RequestParam Long companyId) {
         return instructorService.assignInstructorToCompany(instructorId, companyId);
     }
-
-
 
     @PostMapping("/assignCourse/{instructorId}/{courseId}")
     public SimpleResponse assignInstructorToCourse(@PathVariable Long instructorId, @PathVariable Long courseId) {

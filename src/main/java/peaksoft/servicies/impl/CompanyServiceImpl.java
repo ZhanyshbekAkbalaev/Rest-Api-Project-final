@@ -44,6 +44,7 @@ public class CompanyServiceImpl implements CompanyService {
     @Override
     public CompanyResponse findByCompanyId(Long companyId) {
         return companyRepository.getCompaniesById(companyId);
+
     }
 
     @Override
@@ -76,7 +77,7 @@ public class CompanyServiceImpl implements CompanyService {
         companyRepository.deleteById(companyId);
         return SimpleResponse.builder()
                 .status(HttpStatus.OK)
-                .message(String.format("Company by id is: %s is successfully delete",companyId))
+                .message(String.format("Company by id is: %s is successfully delete", companyId))
                 .build();
     }
 }
